@@ -1,5 +1,6 @@
 package proyectoJava.proyecto1.controller;
 
+import org.hibernate.dialect.function.array.AbstractArrayTrimFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import proyectoJava.proyecto1.Service.UserService;
@@ -10,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/users")
 public class UserController {
-
+    
     @Autowired
     private UserService userService;
 
