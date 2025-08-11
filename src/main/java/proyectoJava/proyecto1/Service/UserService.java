@@ -23,13 +23,11 @@ public class UserService {
         return optionalUser.get();
     }
 
-
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
 
     public void deleteUser (Long id){
-
         userRepository.deleteById(id);
     }
 
