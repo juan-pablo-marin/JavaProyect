@@ -1,6 +1,11 @@
 package proyectoJava.proyecto1.model;
+import io.swagger.v3.oas.annotations.media.Schema;
 
+@Schema(description = "Clase que representa una calculadora básica")
 public class Calculator {
+
+    public Calculator() {
+    }
 
     public int add(int a, int b) {
         return a + b;
