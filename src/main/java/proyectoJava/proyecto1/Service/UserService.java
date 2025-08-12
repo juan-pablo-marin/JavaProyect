@@ -1,7 +1,11 @@
 package proyectoJava.proyecto1.Service;
 
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import proyectoJava.proyecto1.model.User;
 import proyectoJava.proyecto1.repository.UserRepository;
 
@@ -10,11 +14,14 @@ import java.util.Optional;
 
 
 @Component
+@RequiredArgsConstructor
+@Slf4j
+@Service
 public class UserService {
     @Autowired
-    private UserRepository userRepository;
+    private  UserRepository userRepository;
 
-    public User createuser(User user){
+    public User createUser(User user){
         return userRepository.save(user);
     }
 

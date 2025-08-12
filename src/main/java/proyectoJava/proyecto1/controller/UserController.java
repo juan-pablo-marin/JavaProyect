@@ -1,6 +1,6 @@
 package proyectoJava.proyecto1.controller;
 
-import org.hibernate.dialect.function.array.AbstractArrayTrimFunction;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import proyectoJava.proyecto1.Service.UserService;
@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/users")
+@RequiredArgsConstructor
 public class UserController {
     
     @Autowired
@@ -17,7 +18,7 @@ public class UserController {
 
     @PostMapping
     public User createuser(@RequestBody User  user){
-        return userService.createuser(user);
+        return userService.createUser(user);
     }
 
     @GetMapping
