@@ -1,0 +1,16 @@
+
+services:
+  spring-api-image:
+    image: spring-api-image
+    container_name: spring-api-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8080"
+    networks:
+      - spring-network
+networks:
+  spring-network:
+volumes:
+  mysql-volume:

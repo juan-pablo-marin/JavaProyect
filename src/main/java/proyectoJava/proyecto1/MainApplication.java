@@ -19,9 +19,9 @@ public class MainApplication {
 	public CommandLineRunner init(UserService userService) {
 		return args -> {
 			User user = User.builder()
-					.firstName("Juan")
-					.lastName("Pérez")
 					.email("juan@example.com")
+					.first_name("Juan")
+					.last_name("Pérez")
 					.build();
 			User created = userService.createUser(user);
 			System.out.println("Usuario creado: " + created);

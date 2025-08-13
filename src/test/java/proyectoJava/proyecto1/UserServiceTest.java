@@ -30,8 +30,8 @@ class UserServiceTest {
 
         user=new User();
         user.setEmail("elha@gmail.com");
-        user.setLastName("Marin");
-        user.setFirstName("Elha");
+        user.setLast_name("Marin");
+        user.setFirst_name("Elha");
         user.setId(new Long("1"));
     }
 
